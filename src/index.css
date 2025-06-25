@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Các custom font-face hoặc CSS phẳng nếu cần */
+
+@font-face {
+    font-family: 'Mova';
+    src: url('./assets/font/Mova.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Michroma';
+    src: url('./assets/font/Michroma.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Beckman';
+    src: url('./assets/font/Beckman-Free.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rexlia';
+    src: url('./assets/font/rexlia free.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

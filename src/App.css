@@ -1,0 +1,30 @@
+@keyframes flash-color {
+  0% {
+    color: #6c757d;
+  }
+
+  /* 
+  20% {
+    color: #e0e0e0;
+  } */
+
+  40% {
+    color: #ffffff;
+  }
+
+  60% {
+    color: #b0b0b0;
+  }
+
+  80% {
+    color: #e0e0e0;
+  }
+
+  100% {
+    color: #6c757d;
+  }
+}
+
+.flash-on-hover:hover {
+  animation: flash-color 0.3s linear;
+}
