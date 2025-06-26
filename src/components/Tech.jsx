@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import BallCanvas from "./canvas/BallCanvas";
 import { technologies } from "../constants";
 import { textVariant } from "../utils/motion";
+import bgTech from "../assets/bg_tech.jpg";
 
 const Tech = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
@@ -13,7 +14,7 @@ const Tech = () => {
       ref={ref}
       className="px-6 sm:py-16 py-10 w-full relative z-0"
       style={{
-        backgroundImage: `url('/src/assets/bg_tech.jpg')`,
+        backgroundImage: `url(${bgTech})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

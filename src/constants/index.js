@@ -22,6 +22,14 @@ import ESMP from "../assets/projects/ESMP.png";
 import FPT from "../assets/exp/fpt.png";
 import Vinova from "../assets/exp/vinova.png";
 
+import LearnKartS from "../assets/cert/LearnKartS.png";
+import Michigan from "../assets/cert/michigan.png";
+import California from "../assets/cert/california.png";
+import CertNexus from "../assets/cert/certNexus.png";
+import Coursera from "../assets/cert/coursera.png";
+import Sydney from "../assets/cert/sydney.png";
+import Colorado from "../assets/cert/colorado.png";
+
 const technologies = [
   {
     name: "HTML 5",
@@ -169,7 +177,7 @@ const certifications = [
     name: "Core Java for Complete Beginners Specialization",
     issuer: "LearnKartS",
     issueDate: "Feb 2025",
-    logo: "/src/assets/cert/LearnKartS.png",
+    logo: LearnKartS,
     credentialUrl:
       "https://www.coursera.org/account/accomplishments/specialization/certificate/H3J9PGB5QP7X",
   },
@@ -177,7 +185,7 @@ const certifications = [
     name: "UX (User Experience) Capstone",
     issuer: "University of Michigan",
     issueDate: "May 2024",
-    logo: "/src/assets/cert/michigan.png",
+    logo: Michigan,
     credentialUrl:
       "https://www.coursera.org/account/accomplishments/specialization/certificate/BH5Y5T2HVZNX",
   },
@@ -185,7 +193,7 @@ const certifications = [
     name: "UX Design: From Concept to Prototype",
     issuer: "University of Michigan",
     issueDate: "May 2024",
-    logo: "/src/assets/cert/michigan.png",
+    logo: Michigan,
     credentialUrl:
       "https://www.coursera.org/account/accomplishments/specialization/certificate/PH98RHCSLBWX",
   },
@@ -193,7 +201,7 @@ const certifications = [
     name: "UX Research at Scale: Surveys, Analytics, Online Testing",
     issuer: "University of Michigan",
     issueDate: "May 2024",
-    logo: "/src/assets/cert/michigan.png",
+    logo: Michigan,
     credentialUrl:
       "https://www.coursera.org/account/accomplishments/specialization/certificate/KEQ36H8UMPSM",
   },
@@ -201,7 +209,7 @@ const certifications = [
     name: "User Experience Research and Design Specialization",
     issuer: "University of Michigan",
     issueDate: "May 2024",
-    logo: "/src/assets/cert/michigan.png",
+    logo: Michigan,
     credentialUrl:
       "https://www.coursera.org/account/accomplishments/specialization/certificate/YNKVEWHQCW5Z",
   },
@@ -209,7 +217,7 @@ const certifications = [
     name: "Project Management Principles and Practices Specialization",
     issuer: "University of California, Irvine",
     issueDate: "Jan 2024",
-    logo: "/src/assets/cert/california.png",
+    logo: California,
     credentialUrl:
       "https://www.coursera.org/account/accomplishments/specialization/certificate/2X4SUPX2CSXK",
   },
@@ -217,7 +225,7 @@ const certifications = [
     name: "Academic English: Writing Specialization",
     issuer: "University of California, Irvine",
     issueDate: "Sep 2023",
-    logo: "/src/assets/cert/california.png",
+    logo: California,
     credentialUrl:
       "https://www.coursera.org/account/accomplishments/specialization/certificate/9FPFR9CZX6QH",
   },
@@ -225,7 +233,7 @@ const certifications = [
     name: "CertNexus Certified Ethical Emerging Technologist Specialization",
     issuer: "CertNexus",
     issueDate: "May 2023",
-    logo: "/src/assets/cert/certNexus.png",
+    logo: CertNexus,
     credentialUrl:
       "https://www.coursera.org/account/accomplishments/specialization/certificate/LQK4VFZNB2GH",
   },
@@ -233,7 +241,7 @@ const certifications = [
     name: "Lean Software Development",
     issuer: "Coursera",
     issueDate: "Mar 2023",
-    logo: "/src/assets/cert/coursera.png",
+    logo: Coursera,
     credentialUrl:
       "https://www.coursera.org/account/accomplishments/specialization/certificate/9FU5NDGKTND8",
   },
@@ -241,7 +249,7 @@ const certifications = [
     name: "Agile Software Development",
     issuer: "Coursera",
     issueDate: "Mar 2023",
-    logo: "/src/assets/cert/coursera.png",
+    logo: Coursera,
     credentialUrl:
       "https://www.coursera.org/account/accomplishments/certificate/EQFSXN89WSYD",
   },
@@ -249,7 +257,7 @@ const certifications = [
     name: "Software Development Lifecycle",
     issuer: "Coursera",
     issueDate: "Mar 2023",
-    logo: "/src/assets/cert/coursera.png",
+    logo: Coursera,
     credentialUrl:
       "https://www.coursera.org/account/accomplishments/specialization/certificate/MCPXAZMN5TEK",
   },
@@ -257,7 +265,7 @@ const certifications = [
     name: "Software Development Processes and Methodologies",
     issuer: "Coursera",
     issueDate: "Mar 2023",
-    logo: "/src/assets/cert/coursera.png",
+    logo: Coursera,
     credentialUrl:
       "https://www.coursera.org/account/accomplishments/certificate/SLHJNYKBZWG8",
   },
@@ -265,7 +273,7 @@ const certifications = [
     name: "Web Design for Everybody: Basics of Web Development & Coding Specialization",
     issuer: "University of Michigan",
     issueDate: "Dec 2022",
-    logo: "/src/assets/cert/michigan.png",
+    logo: Michigan,
     credentialUrl:
       "https://www.coursera.org/account/accomplishments/specialization/certificate/BQ858LY8WRX7",
   },
@@ -273,7 +281,7 @@ const certifications = [
     name: "Computer Communications Specialization",
     issuer: "University of Colorado System",
     issueDate: "Aug 2022",
-    logo: "/src/assets/cert/colorado.png",
+    logo: Colorado,
     credentialUrl:
       "https://www.coursera.org/account/accomplishments/specialization/certificate/WPSWYLBB5HBW",
   },
@@ -281,7 +289,7 @@ const certifications = [
     name: "Academic Skills for University Success Specialization",
     issuer: "The University of Sydney",
     issueDate: "Mar 2022",
-    logo: "/src/assets/cert/sydney.png",
+    logo: Sydney,
     credentialUrl:
       "https://www.coursera.org/account/accomplishments/specialization/certificate/T98WQG5XEEHK",
   },
