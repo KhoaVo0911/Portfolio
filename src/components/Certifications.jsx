@@ -50,7 +50,9 @@ const Certifications = () => {
   };
 
   return (
-    <section className="w-full py-20 px-2 flex flex-col items-center justify-center relative bg-gradient-to-br from-white via-gray-100 to-black/90 overflow-x-hidden">
+    <section className="w-full py-20 px-2 flex flex-col items-center justify-center relative bg-white dark:bg-black transition-colors duration-300 overflow-x-hidden">
+      {/* Gradient overlay cho section */}
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-transparent via-transparent to-gray-200 dark:bg-gradient-to-br dark:from-black dark:via-black dark:to-white/10 z-0" />
       <div className="relative z-10 max-w-6xl w-full mx-auto">
         <motion.h2
           ref={headingRef}
@@ -92,17 +94,9 @@ const Certifications = () => {
                 initial="hidden"
                 animate={controls}
               >
-                <Card
-                  className="flex items-center gap-6 p-7 bg-white/10 dark:bg-black/20 backdrop-blur-xl border border-white/30 dark:border-white/20 shadow-2xl rounded-3xl transition-transform duration-300 hover:scale-[1.03] hover:shadow-3xl hover:bg-white/20 hover:backdrop-blur-2xl group relative overflow-hidden"
-                  style={{
-                    boxShadow:
-                      "0 8px 32px 0 rgba(31, 38, 135, 0.18), 0 1.5px 8px 0 rgba(0,0,0,0.08)",
-                    border: "1.5px solid rgba(255,255,255,0.25)",
-                    background:
-                      "linear-gradient(120deg, rgba(255,255,255,0.45) 0%, rgba(200,200,200,0.18) 100%)",
-                  }}
-                >
-                  <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-b from-black/80 to-white/80 flex items-center justify-center overflow-hidden border-2 border-white/40 shadow-md">
+                <Card className="flex items-center gap-6 p-7 bg-white dark:bg-gradient-to-br dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-900 border border-gray-200 dark:border-white/10 shadow-2xl rounded-3xl transition-transform duration-300 hover:scale-[1.03] hover:shadow-3xl group relative overflow-hidden dark:shadow-white/20">
+                  <div className="absolute inset-0 pointer-events-none rounded-3xl bg-gradient-to-br from-white/30 to-transparent dark:from-white/5 dark:to-transparent" />
+                  <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-b from-black/80 to-white/80 flex items-center justify-center overflow-hidden border-2 border-white/40 shadow-xl ">
                     <img
                       src={cert.logo}
                       alt={cert.issuer}
@@ -132,15 +126,6 @@ const Certifications = () => {
                       </a>
                     )}
                   </div>
-                  {/* Glassmorphism overlay */}
-                  <div
-                    className="absolute inset-0 pointer-events-none rounded-3xl"
-                    style={{
-                      background:
-                        "linear-gradient(120deg, rgba(255,255,255,0.18) 0%, rgba(0,0,0,0.08) 100%)",
-                      mixBlendMode: "overlay",
-                    }}
-                  />
                 </Card>
               </motion.div>
             );

@@ -31,7 +31,7 @@ const ProjectCard = ({ project, idx }) => {
       onMouseLeave={() => setHovered(false)}
       style={{ perspective: 1200 }}
     >
-      <Card className="w-full h-full flex flex-col overflow-hidden shadow-2xl border-2 border-black/10 bg-white/90 transition-transform duration-300 relative">
+      <Card className="w-full h-full flex flex-col overflow-hidden shadow-2xl border-2 border-black/10 dark:border-white/10 bg-gray-100 dark:bg-neutral-900/90 transition-transform duration-300 relative">
         <div className="relative h-2/3 w-full overflow-hidden">
           <img
             src={project.image?.src || "/src/assets/logo.png"}
@@ -55,12 +55,14 @@ const ProjectCard = ({ project, idx }) => {
           }}
         >
           <h4 className="text-xl font-bold font-beckman text-center mb-2">
-            {project.name}
+            <span className="text-black dark:text-white ">{project.name}</span>
           </h4>
-          <p className="text-gray-600 text-center font-michroma">
-            {project.description.length > 60
-              ? project.description.slice(0, 60) + "..."
-              : project.description}
+          <p className="text-white text-center font-michroma">
+            <span className="text-black dark:text-white">
+              {project.description.length > 60
+                ? project.description.slice(0, 60) + "..."
+                : project.description}
+            </span>
           </p>
         </motion.div>
         <motion.div
@@ -71,16 +73,16 @@ const ProjectCard = ({ project, idx }) => {
           style={{ pointerEvents: hovered ? "auto" : "none" }}
         >
           <h3 className="text-2xl font-bold mb-2 font-beckman tracking-wider text-center drop-shadow-lg">
-            {project.name}
+            <span className=" dark:text-white">{project.name}</span>
           </h3>
-          <p className="text-sm font-michroma mb-4 text-gray-200 text-center">
-            {project.description}
+          <p className="text-sm font-michroma mb-4 text-white text-center">
+            <span className=" dark:text-white">{project.description}</span>
           </p>
           <div className="flex flex-wrap gap-2 justify-center mb-4 font-rexlia">
             {project.tags.map((tag) => (
               <span
                 key={tag.name}
-                className={`px-2 py-1 rounded text-xs ${tag.color}`}
+                className={`px-2 py-1 rounded text-xs bg-gray-100 dark:bg-neutral-800 text-black dark:text-white`}
               >
                 #{tag.name}
               </span>
@@ -90,7 +92,7 @@ const ProjectCard = ({ project, idx }) => {
             <Button
               asChild
               variant="default"
-              className="px-4 py-2 text-sm font-semibold font-rexlia"
+              className="px-4 py-2 text-sm font-semibold font-rexlia border border-gray-200 dark:border-white/10 bg-white dark:bg-neutral-900 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors duration-200 shadow"
             >
               <a href={project.repo} target="_blank" rel="noopener noreferrer">
                 Source
@@ -99,7 +101,7 @@ const ProjectCard = ({ project, idx }) => {
             <Button
               asChild
               variant="default"
-              className="px-4 py-2 text-sm font-semibold font-rexlia"
+              className="px-4 py-2 text-sm font-semibold font-rexlia border border-gray-200 dark:border-white/10 bg-white dark:bg-neutral-900 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors duration-200 shadow"
             >
               <a href={project.demo} target="_blank" rel="noopener noreferrer">
                 Live Demo
@@ -128,7 +130,7 @@ const Project = () => {
     <section
       id="projects"
       ref={ref}
-      className="w-full min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-[#f8fafc] to-[#e2e8f0] py-20 px-4"
+      className="w-full min-h-screen flex flex-col items-center justify-center bg-white text-black dark:bg-black dark:text-white py-20 px-4 transition-colors duration-300"
     >
       <motion.div
         ref={headingRef}
@@ -140,7 +142,7 @@ const Project = () => {
         <h2 className="text-4xl font-bold font-mova tracking-widest text-left mb-4">
           MY PROJECTS
         </h2>
-        <p className="text-lg text-gray-700 font-beckman text-left">
+        <p className="text-lg text-gray-700 font-beckman text-left dark:text-white">
           Some of my featured personal work. Hover over each card to see
           details, source code and live demo.
         </p>

@@ -36,7 +36,7 @@ const TimelineItem = ({ exp, idx }) => {
         <div className="w-1 h-full  from-gray-300 to-gray-500 rounded-full" />
       </div>
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-        <div className="w-16 h-16 rounded-full border-4 border-black bg-white flex items-center justify-center shadow-lg">
+        <div className="w-16 h-16 rounded-full border-4 border-black bg-white flex items-center justify-center shadow-lg ">
           <img
             src={exp.icon}
             alt={exp.company_name}
@@ -56,14 +56,26 @@ const TimelineItem = ({ exp, idx }) => {
           animate={controls}
           className="relative max-w-lg w-full"
         >
-          <Card className="py-6 px-8 bg-white/70 backdrop-blur-md shadow-2xl border border-black/10 rounded-2xl relative">
-            <h3 className="text-xl font-bold font-beckman mb-1 uppercase text-black">
+          <Card
+            className={`
+              py-6 px-8
+               dark:bg-white bg- from-neutral-900 via-neutral-800 to-neutral-900 border-white/10 shadow-white/20
+              dark:border-gray-200 dark:shadow-2xl
+              border shadow-2xl rounded-3xl transition-transform duration-300 hover:scale-[1.03] hover:shadow-3xl group relative overflow-hidden
+            `}
+          >
+            <div
+              className="absolute inset-0 pointer-events-none rounded-3xl 
+              bg-gradient-to-br from-white/5 to-transparent dark:from-white/30 dark:to-transparent
+            "
+            />
+            <h3 className="text-xl font-bold font-beckman mb-1 uppercase text-white dark:text-black">
               {exp.title}
             </h3>
-            <p className="text-gray-700 font-michroma mb-2">
+            <p className="text-white dark:text-black font-michroma mb-2">
               {exp.company_name}
             </p>
-            <div className="mt-4 text-sm text-gray-500 font-rexlia text-right">
+            <div className="mt-4 text-sm text-gray-400 dark:text-gray-600 font-rexlia text-right">
               {exp.date}
             </div>
           </Card>
@@ -96,7 +108,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="w-full min-h-screen py-20 px-2 flex flex-col items-center justify-center relative bg-gradient-to-br from-white via-gray-100 to-black overflow-x-hidden"
+      className="w-full min-h-screen py-20 px-2 flex flex-col items-center justify-center relative bg-neutral-900 text-white overflow-x-hidden transition-colors duration-300 dark:bg-white dark:text-black"
     >
       <div
         className="absolute left-1/2 top-0 -translate-x-1/2 h-full w-1 bg-gradient-to-b from-gray-300 to-gray-500 rounded-full z-0"
@@ -117,10 +129,10 @@ const Experience = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mb-16"
         >
-          <p className="text-lg font-michroma text-gray-500 mb-2 uppercase tracking-widest">
+          <p className="text-lg font-michroma text-white dark:text-black mb-2 uppercase tracking-widest ">
             What I've done so far
           </p>
-          <h2 className="text-5xl font-black font-mova tracking-tight mb-4 text-black">
+          <h2 className="text-5xl font-black font-mova tracking-tight mb-4 text-white dark:text-black">
             WORK EXPERIENCE
           </h2>
         </motion.div>

@@ -10,26 +10,31 @@ import Contact from "./components/Contact";
 import { TooltipProvider } from "./components/ui/tooltip";
 import BackToTop from "./components/BackToTop";
 import Footer from "./components/Footer";
+import { ThemeProvider } from "./components/ui/theme-provider";
+import ThemeToggle from "./components/ui/theme-toggle";
 
 import "./App.css";
 
 function App() {
   return (
-    <TooltipProvider>
-      <>
-        <Navbar />
-        {/* <div style={{ height: 120 }}></div> */}
-        <Hero />
-        <AboutMe />
-        <Project />
-        <Tech />
-        <Certifications />
-        <Experience />
-        <Contact />
-        <Footer />
-        <BackToTop />
-      </>
-    </TooltipProvider>
+    <ThemeProvider>
+      <TooltipProvider>
+        <>
+          <Navbar />
+          <ThemeToggle />
+          {/* <div style={{ height: 55 }}></div> */}
+          <Hero />
+          <AboutMe />
+          <Project />
+          <Tech />
+          <Certifications />
+          <Experience />
+          <Contact />
+          <Footer />
+          <BackToTop />
+        </>
+      </TooltipProvider>
+    </ThemeProvider>
   );
 }
 

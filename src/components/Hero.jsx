@@ -22,7 +22,7 @@ const Hero = () => {
       animate={controls}
       initial={{ opacity: 0, y: 40 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="relative w-full h-[90vh] flex items-stretch overflow-hidden"
+      className="relative w-full h-[96vh] flex items-stretch overflow-hidden"
     >
       <img
         src={bwMap}
@@ -38,7 +38,7 @@ const Hero = () => {
         }}
       ></div>
       <div
-        className="absolute right-0 top-0 h-full w-full z-20 pointer-events-none"
+        className="absolute right-0 top-0 h-full w-full z-10 pointer-events-none"
         style={{
           clipPath: "polygon(75% 0, 100% 0, 100% 100%, 45% 100%)",
           background: "rgba(0,0,0,0.88)",
@@ -47,7 +47,7 @@ const Hero = () => {
       <img
         src={KV}
         alt="KV"
-        className="absolute right-0 top-0 h-full object-contain z-30"
+        className="absolute right-0 top-0 h-full object-contain z-10"
         style={{
           width: "85%",
           objectPosition: "100% 80%",
@@ -56,7 +56,7 @@ const Hero = () => {
           filter: "grayscale(1)",
         }}
       />
-      <div className="absolute z-40 flex flex-col justify-center h-full pl-[8vw] w-1/2 top-0 left-0">
+      <div className="absolute z-10 flex flex-col justify-center h-full pl-[8vw] w-1/2 top-0 left-0">
         <h1 className="text-6xl font-black leading-tight mb-2  font-mova">
           HI, I'M
         </h1>
@@ -70,12 +70,12 @@ const Hero = () => {
           Front End Developer
         </p>
       </div>
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-40">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10">
         <div
           className="w-8 h-12 border-2 border-white rounded-full flex items-center justify-center cursor-pointer"
           onClick={() => {
             document
-              .getElementById("about-me")
+              .getElementById("about")
               .scrollIntoView({ behavior: "smooth" });
           }}
         >

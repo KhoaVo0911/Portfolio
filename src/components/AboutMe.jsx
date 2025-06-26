@@ -30,7 +30,7 @@ const AboutMe = () => {
   return (
     <section
       id="about"
-      className="w-full min-h-screen flex items-center justify-center bg-black text-white"
+      className="w-full min-h-screen flex items-center justify-center bg-black text-white dark:bg-white dark:text-black transition-colors duration-300"
     >
       <motion.div
         ref={ref}
@@ -45,21 +45,25 @@ const AboutMe = () => {
           transition={{ delay: 0.3, duration: 0.7 }}
           className="flex-shrink-0"
         >
-          <Card className="relative w-96 h-96 group transition-transform duration-300 hover:scale-105">
-            <img src={KV} alt="Avatar" className="w-full h-full object-cover" />
-          </Card>
+          <div className="relative w-80 h-80 flex items-center justify-center group">
+            <div className="absolute inset-0 rounded-full p-1 bg-gradient-to-tr from-blue-400 via-purple-500 to-pink-400 group-hover:blur-md group-hover:opacity-90 opacity-70 transition-all duration-300"></div>
+            <img
+              src={KV}
+              alt="Avatar"
+              className="relative w-80 h-80 object-cover rounded-full border-4 border-white dark:border-neutral-900 shadow-2xl group-hover:scale-105 group-hover:shadow-[0_0_40px_10px_rgba(124,58,237,0.3)] transition-transform duration-300"
+            />
+          </div>
         </motion.div>
-        {/* Info */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
           className="flex-[1.5] text-left"
         >
-          <h2 className="text-4xl font-bold mb-12 font-mova tracking-widest">
+          <h2 className="text-4xl font-bold mb-10 font-mova tracking-widest">
             ABOUT ME
           </h2>
-          <p className="text-lg mb-8 text-gray-300 font-beckman">
+          <p className="text-lg mb-6 pb-4 text-white dark:text-gray-600 font-beckman">
             I am a passionate Front End Developer with a love for crafting
             beautiful and functional web experiences. I enjoy turning complex
             problems into simple, elegant solutions.
@@ -68,10 +72,10 @@ const AboutMe = () => {
             <div className="flex-1 flex flex-col gap-3 ">
               {info.map((item) => (
                 <div key={item.label} className="flex flex-row items-start">
-                  <span className="w-24 min-w-[6rem] font-semibold text-gray-400">
+                  <span className="w-24 min-w-[6rem] font-semibold text-gray-300 dark:text-gray-600">
                     {item.label}:
                   </span>
-                  <span className="ml-4 text-white break-words flex-1 min-w-0">
+                  <span className="ml-4 text-white dark:text-black break-words flex-1 min-w-0">
                     {item.value}
                   </span>
                 </div>
@@ -85,7 +89,7 @@ const AboutMe = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                className="bg-white dark:bg-neutral-900 border border-gray-200 dark:border-white/10 rounded-full w-12 h-12 flex items-center justify-center shadow hover:shadow-lg transition-transform hover:scale-110 text-black dark:text-white hover:text-[#6e5494]"
+                className="bg-white dark:bg-neutral-900 border border-gray-200 dark:border-white/10 rounded-full w-12 h-12 flex items-center justify-center shadow hover:shadow-lg transition-transform hover:scale-110 text-black dark:text-white hover:text-[#6e5494] transition-colors duration-200 dark:hover:text-[#6e5494]"
               >
                 <Github size={26} />
               </a>
@@ -94,7 +98,7 @@ const AboutMe = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="bg-white dark:bg-neutral-900 border border-gray-200 dark:border-white/10 rounded-full w-12 h-12 flex items-center justify-center shadow hover:shadow-lg transition-transform hover:scale-110 text-black dark:text-white hover:text-[#0077b5]"
+                className="bg-white dark:bg-neutral-900 border border-gray-200 dark:border-white/10 rounded-full w-12 h-12 flex items-center justify-center shadow hover:shadow-lg transition-transform hover:scale-110 text-black dark:text-white hover:text-[#0077b5] transition-colors duration-200 dark:hover:text-[#0077b5]"
               >
                 <Linkedin size={26} />
               </a>
@@ -102,7 +106,7 @@ const AboutMe = () => {
           </div>
           <Button
             asChild
-            className="mt-2 px-8 py-3 text-lg font-bold font-rexlia"
+            className="mt-2 px-8 py-3 text-lg font-bold font-rexlia border border-gray-200 dark:border-white/10 bg-white dark:bg-neutral-900 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors duration-200 shadow"
           >
             <a href="/CV_Vo Dang Khoa.pdf" download>
               Download CV

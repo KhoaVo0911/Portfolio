@@ -91,11 +91,7 @@ const projects = [
     name: "EVENT SALES MANAGEMENT PLATFORM ",
     description:
       "An intuitive platform that helps hosts plan, manage, and track events of any scale with ease.",
-    tags: [
-      { name: "react", color: "blue-text-gradient" },
-      { name: "javascript", color: "green-text-gradient" },
-      { name: "chakraui", color: "pink-text-gradient" },
-    ],
+    tags: [{ name: "react" }, { name: "javascript" }, { name: "chakraui" }],
     image: {
       src: ESMP,
     },
@@ -110,15 +106,12 @@ const projects = [
     tags: [
       {
         name: "react",
-        color: "blue-text-gradient",
       },
       {
-        name: "shadcnui",
-        color: "green-text-gradient",
+        name: "shadcn/ui",
       },
       {
         name: "typescript",
-        color: "pink-text-gradient",
       },
     ],
     image: {
@@ -135,19 +128,15 @@ const projects = [
     tags: [
       {
         name: "reactjs",
-        color: "blue-text-gradient",
       },
       {
         name: "javascript",
-        color: "green-text-gradient",
       },
       {
         name: "tailwindcss",
-        color: "pink-text-gradient",
       },
       {
         name: "mui",
-        color: "purple-text-gradient",
       },
     ],
     image: {
