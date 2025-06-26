@@ -9,6 +9,7 @@ import Certifications from "./components/Certifications";
 import Contact from "./components/Contact";
 import { TooltipProvider } from "./components/ui/tooltip";
 import BackToTop from "./components/BackToTop";
+import Footer from "./components/Footer";
 
 import "./App.css";
 
@@ -17,7 +18,7 @@ function App() {
     <TooltipProvider>
       <>
         <Navbar />
-        <div style={{ height: 120 }}></div>
+        {/* <div style={{ height: 120 }}></div> */}
         <Hero />
         <AboutMe />
         <Project />
@@ -25,6 +26,7 @@ function App() {
         <Certifications />
         <Experience />
         <Contact />
+        <Footer />
         <BackToTop />
       </>
     </TooltipProvider>

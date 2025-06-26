@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import KV from "../assets/KV.png";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
+import { Github, Linkedin, Facebook, Twitter, Mail } from "lucide-react";
 
 const info = [
   { label: "Name", value: "Vo Dang Khoa" },
@@ -38,7 +39,6 @@ const AboutMe = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="flex flex-col md:flex-row gap-24 max-w-6xl w-full px-12 mx-auto"
       >
-        {/* Avatar */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -76,6 +76,28 @@ const AboutMe = () => {
                   </span>
                 </div>
               ))}
+            </div>
+          </div>
+          <div className="mb-8 flex flex-row items-center justify-start">
+            <div className="flex gap-4">
+              <a
+                href="https://github.com/KhoaVo0911"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="bg-white dark:bg-neutral-900 border border-gray-200 dark:border-white/10 rounded-full w-12 h-12 flex items-center justify-center shadow hover:shadow-lg transition-transform hover:scale-110 text-black dark:text-white hover:text-[#6e5494]"
+              >
+                <Github size={26} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/khoavo0911"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="bg-white dark:bg-neutral-900 border border-gray-200 dark:border-white/10 rounded-full w-12 h-12 flex items-center justify-center shadow hover:shadow-lg transition-transform hover:scale-110 text-black dark:text-white hover:text-[#0077b5]"
+              >
+                <Linkedin size={26} />
+              </a>
             </div>
           </div>
           <Button

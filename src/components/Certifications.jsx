@@ -59,7 +59,7 @@ const Certifications = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-4xl font-black font-mova tracking-tight mb-12 text-black dark:text-white text-left"
         >
-          Licenses & Certifications
+          MY CERTIFICATIONS
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {certifications.map((cert, idx) => {

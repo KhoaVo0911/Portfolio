@@ -80,7 +80,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="min-h-screen flex items-center justify-center bg-neutral-900 px-2 py-8"
+      className="py-20 flex items-center justify-center bg-neutral-900 px-2"
     >
       <Card className="w-full max-w-2xl p-10 md:p-16 bg-neutral-800/90 border-none shadow-2xl rounded-3xl">
         <div className="mb-10">
