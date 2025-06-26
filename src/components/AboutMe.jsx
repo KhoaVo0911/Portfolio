@@ -89,7 +89,7 @@ const AboutMe = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                className="bg-white dark:bg-neutral-900 border border-gray-200 dark:border-white/10 rounded-full w-12 h-12 flex items-center justify-center shadow hover:shadow-lg transition-transform hover:scale-110 text-black dark:text-white hover:text-[#6e5494] transition-colors duration-200 dark:hover:text-[#6e5494]"
+                className="bg-white dark:bg-neutral-900 border border-gray-200 dark:border-white/10 rounded-full w-12 h-12 flex items-center justify-center shadow hover:shadow-lg hover:scale-110 text-black dark:text-white hover:text-[#6e5494] transition-colors duration-200 dark:hover:text-[#6e5494]"
               >
                 <Github size={26} />
               </a>
@@ -98,7 +98,7 @@ const AboutMe = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="bg-white dark:bg-neutral-900 border border-gray-200 dark:border-white/10 rounded-full w-12 h-12 flex items-center justify-center shadow hover:shadow-lg transition-transform hover:scale-110 text-black dark:text-white hover:text-[#0077b5] transition-colors duration-200 dark:hover:text-[#0077b5]"
+                className="bg-white dark:bg-neutral-900 border border-gray-200 dark:border-white/10 rounded-full w-12 h-12 flex items-center justify-center shadow hover:shadow-lg  hover:scale-110 text-black dark:text-white hover:text-[#0077b5] transition-colors duration-200 dark:hover:text-[#0077b5]"
               >
                 <Linkedin size={26} />
               </a>
