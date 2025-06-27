@@ -35,6 +35,7 @@ const Tooltip = ({ children, content }) => (
 );
 
 const Certifications = () => {
+  const [activeIndex, setActiveIndex] = React.useState(0);
   const headingControls = useAnimation();
   const [headingRef, headingInView] = useInView({
     triggerOnce: false,
