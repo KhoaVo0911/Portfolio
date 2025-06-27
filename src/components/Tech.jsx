@@ -27,7 +27,7 @@ const Tech = () => {
           variants={textVariant(0.1)}
           initial="hidden"
           animate={inView ? "show" : "hidden"}
-          className="w-full max-w-6xl mx-auto px-2 text-left mb-8"
+          className="w-full max-w-6xl mx-auto px-2 mb-6 sm:mb-8 text-center"
         >
           <p className="text-[26px] text-white uppercase tracking-wider font-semibold font-mova mb-2">
             My skills

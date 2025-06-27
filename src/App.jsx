@@ -12,15 +12,21 @@ import BackToTop from "./components/BackToTop";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "./components/ui/theme-provider";
 import ThemeToggle from "./components/ui/theme-toggle";
+import MobileMenuOverlay from "./components/MobileMenuOverlay";
 
 import "./App.css";
 
 function App() {
+  const [mobileOpen, setMobileOpen] = useState(false);
   return (
     <ThemeProvider>
       <TooltipProvider>
         <>
-          <Navbar />
+          <Navbar onMobileMenuOpen={() => setMobileOpen(true)} />
+          <MobileMenuOverlay
+            open={mobileOpen}
+            onClose={() => setMobileOpen(false)}
+          />
           <ThemeToggle />
           {/* <div style={{ height: 55 }}></div> */}
           <Hero />

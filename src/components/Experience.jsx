@@ -31,58 +31,49 @@ const TimelineItem = ({ exp, idx }) => {
   }, [controls, inView]);
   const isLeft = idx % 2 === 0;
   return (
-    <div className="relative flex w-full min-h-[160px] mb-16 items-center">
-      <div className="absolute left-1/2 top-0 -translate-x-1/2 h-full flex flex-col items-center z-0">
-        <div className="w-1 h-full  from-gray-300 to-gray-500 rounded-full" />
+    <div className="relative w-full mb-10 md:mb-16 flex flex-col md:flex-row items-center md:items-stretch">
+      <div className="hidden md:flex absolute left-1/2 top-0 -translate-x-1/2 h-full flex-col items-center z-0">
+        <div className="w-1 h-full from-gray-300 to-gray-500 rounded-full bg-gradient-to-b" />
       </div>
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-        <div className="w-16 h-16 rounded-full border-4 border-black bg-white flex items-center justify-center shadow-lg ">
+      <div className="z-20 flex md:block md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 mb-4 md:mb-0">
+        <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border-4 border-black bg-white flex items-center justify-center shadow-lg mx-auto">
           <img
             src={exp.icon}
             alt={exp.company_name}
-            className="w-10 h-10 object-contain"
+            className="w-8 h-8 md:w-10 md:h-10 object-contain"
           />
         </div>
       </div>
       <div
-        className={`flex-1 flex ${
-          isLeft ? "justify-end pr-12" : "justify-start pl-12"
-        } relative z-10`}
+        className={`w-full md:flex-1 flex ${
+          isLeft ? "md:justify-end md:pr-12" : "md:justify-start md:pl-12"
+        } relative z-10 justify-center`}
       >
         <motion.div
           ref={ref}
           variants={slideInVariant(isLeft ? "left" : "right", 0.1 + idx * 0.1)}
           initial="hidden"
           animate={controls}
-          className="relative max-w-lg w-full"
+          className="relative w-full max-w-md md:max-w-lg"
         >
           <Card
-            className={`
-              py-6 px-8
-               dark:bg-white bg- from-neutral-900 via-neutral-800 to-neutral-900 border-white/10 shadow-white/20
-              dark:border-gray-200 dark:shadow-2xl
-              border shadow-2xl rounded-3xl transition-transform duration-300 hover:scale-[1.03] hover:shadow-3xl group relative overflow-hidden
-            `}
+            className={`py-4 px-4 sm:py-6 sm:px-8 dark:bg-white bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 border-white/10 shadow-white/20 dark:border-gray-200 dark:shadow-2xl border shadow-2xl rounded-3xl transition-transform duration-300 hover:scale-[1.03] hover:shadow-3xl group relative overflow-hidden dark:shadow-white/20`}
           >
-            <div
-              className="absolute inset-0 pointer-events-none rounded-3xl 
-              bg-gradient-to-br from-white/5 to-transparent dark:from-white/30 dark:to-transparent
-            "
-            />
-            <h3 className="text-xl font-bold font-beckman mb-1 uppercase text-white dark:text-black">
+            <div className="absolute inset-0 pointer-events-none rounded-3xl bg-gradient-to-br from-white/5 to-transparent dark:from-white/30 dark:to-transparent" />
+            <h3 className="text-lg sm:text-xl font-bold font-beckman mb-1 uppercase text-white dark:text-black">
               {exp.title}
             </h3>
-            <p className="text-white dark:text-black font-michroma mb-2">
+            <p className="text-white dark:text-black font-michroma mb-2 text-base sm:text-lg">
               {exp.company_name}
             </p>
-            <div className="mt-4 text-sm text-gray-400 dark:text-gray-600 font-rexlia text-right">
+            <div className="mt-4 text-xs sm:text-sm text-gray-400 dark:text-gray-600 font-rexlia text-right">
               {exp.date}
             </div>
           </Card>
         </motion.div>
       </div>
       {idx === 0 && (
-        <div className="absolute left-0 top-0 z-0 opacity-10">
+        <div className="hidden md:block absolute left-0 top-0 z-0 opacity-10">
           <svg width="100" height="140">
             {Array.from({ length: 7 }).map((_, i) => (
               <circle key={i} cx={20} cy={20 + i * 18} r={4} fill="#888" />
@@ -108,13 +99,13 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="w-full min-h-screen py-20 px-2 flex flex-col items-center justify-center relative bg-neutral-900 text-white overflow-x-hidden transition-colors duration-300 dark:bg-white dark:text-black"
+      className="w-full min-h-screen py-16 sm:py-20 px-2 flex flex-col items-center justify-center relative bg-neutral-900 text-white overflow-x-hidden transition-colors duration-300 dark:bg-white dark:text-black"
     >
       <div
-        className="absolute left-1/2 top-0 -translate-x-1/2 h-full w-1 bg-gradient-to-b from-gray-300 to-gray-500 rounded-full z-0"
+        className="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 h-full w-1 bg-gradient-to-b from-gray-300 to-gray-500 rounded-full z-0"
         style={{ minHeight: "100%" }}
       />
-      <div className="absolute right-0 bottom-0 z-0 opacity-10">
+      <div className="hidden md:block absolute right-0 bottom-0 z-0 opacity-10">
         <svg width="120" height="180">
           {Array.from({ length: 8 }).map((_, i) => (
             <circle key={i} cx={100} cy={20 + i * 20} r={5} fill="#222" />
@@ -127,12 +118,12 @@ const Experience = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={headingControls}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mb-16"
+          className="mb-8 sm:mb-12 px-2 sm:px-0"
         >
-          <p className="text-lg font-michroma text-white dark:text-black mb-2 uppercase tracking-widest ">
+          <p className="text-base sm:text-lg font-michroma text-white dark:text-black mb-2 uppercase tracking-widest text-center sm:text-left">
             What I've done so far
           </p>
-          <h2 className="text-5xl font-black font-mova tracking-tight mb-4 text-white dark:text-black">
+          <h2 className="text-3xl xs:text-4xl sm:text-5xl font-black font-mova tracking-tight mb-2 text-white dark:text-black text-center sm:text-left">
             WORK EXPERIENCE
           </h2>
         </motion.div>

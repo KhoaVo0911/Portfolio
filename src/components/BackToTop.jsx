@@ -5,6 +5,11 @@ import { Tooltip, TooltipTrigger, TooltipContent } from "./ui/tooltip";
 const BackToTop = () => {
   const [visible, setVisible] = useState(false);
 
+  // Ẩn khi menu mobile mở
+  const isMobileMenuOpen =
+    typeof window !== "undefined" &&
+    document.body.classList.contains("mobile-menu-open");
+
   useEffect(() => {
     const handleScroll = () => {
       setVisible(window.scrollY > 300);
@@ -12,6 +17,8 @@ const BackToTop = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  if (!visible || isMobileMenuOpen) return null;
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -21,7 +28,7 @@ const BackToTop = () => {
     <div
       className={`fixed bottom-8 right-8 z-50 transition-opacity duration-300 ${
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
-      }`}
+      } hidden md:block`}
     >
       <Tooltip>
         <TooltipTrigger asChild>

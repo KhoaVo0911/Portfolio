@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Các custom font-face hoặc CSS phẳng nếu cần */
-
 @font-face {
     font-family: 'Mova';
     src: url('./assets/font/Mova.otf') format('opentype');

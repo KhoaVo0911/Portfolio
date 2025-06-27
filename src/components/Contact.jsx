@@ -80,14 +80,14 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="py-20 flex items-center justify-center bg-white dark:bg-neutral-900 px-2"
+      className="py-12 sm:py-20 flex items-center justify-center bg-white dark:bg-neutral-900 px-1 sm:px-2"
     >
-      <Card className="w-full max-w-2xl p-10 md:p-16 bg-white/90 dark:bg-neutral-800/90 border-none shadow-2xl rounded-3xl">
+      <Card className="w-full max-w-2xl px-3 py-6 sm:p-10 md:p-16 bg-white/90 dark:bg-neutral-800/90 border-none shadow-2xl rounded-3xl">
         <div className="mb-10">
-          <p className="text-lg font-semibold text-neutral-600 dark:text-neutral-400 mb-1 tracking-widest uppercase font-beckman">
+          <p className="text-base sm:text-lg font-semibold text-neutral-600 dark:text-neutral-400 mb-1 tracking-widest uppercase font-beckman text-center">
             Get in touch
           </p>
-          <h2 className="text-5xl font-extrabold text-black dark:text-white mb-2 leading-tight font-mova">
+          <h2 className="text-3xl xs:text-4xl sm:text-5xl font-extrabold text-black dark:text-white mb-2 leading-tight font-mova text-center">
             CONTACT<span className="text-black dark:text-white"></span>
           </h2>
         </div>
@@ -98,14 +98,14 @@ const Contact = () => {
             initial="hidden"
             animate={controlsName}
           >
-            <label className="block text-base font-medium text-neutral-700 dark:text-neutral-200 mb-2 font-rexlia">
+            <label className="block text-sm sm:text-base font-medium text-neutral-700 dark:text-neutral-200 mb-2 font-rexlia">
               YOUR NAME
             </label>
             <Input
               name="name"
               required
               placeholder="What's your name?"
-              className="font-michroma bg-neutral-100 text-black dark:bg-neutral-900 dark:text-white"
+              className="font-michroma bg-neutral-100 text-black dark:bg-neutral-900 dark:text-white text-base px-5 sm:px-6 py-3 sm:py-4 rounded-2xl"
             />
           </motion.div>
           <motion.div
@@ -114,7 +114,7 @@ const Contact = () => {
             initial="hidden"
             animate={controlsEmail}
           >
-            <label className="block text-base font-medium text-neutral-700 dark:text-neutral-200 mb-2 font-rexlia">
+            <label className="block text-sm sm:text-base font-medium text-neutral-700 dark:text-neutral-200 mb-2 font-rexlia">
               YOUR EMAIL
             </label>
             <Input
@@ -122,7 +122,7 @@ const Contact = () => {
               name="email"
               required
               placeholder="What's your email?"
-              className="font-michroma bg-neutral-100 text-black dark:bg-neutral-900 dark:text-white"
+              className="font-michroma bg-neutral-100 text-black dark:bg-neutral-900 dark:text-white text-base px-5 sm:px-6 py-3 sm:py-4 rounded-2xl"
             />
           </motion.div>
           <motion.div
@@ -131,7 +131,7 @@ const Contact = () => {
             initial="hidden"
             animate={controlsMsg}
           >
-            <label className="block text-base font-medium text-neutral-700 dark:text-neutral-200 mb-2 font-rexlia">
+            <label className="block text-sm sm:text-base font-medium text-neutral-700 dark:text-neutral-200 mb-2 font-rexlia">
               YOUR MESSAGE
             </label>
             <textarea
@@ -139,7 +139,7 @@ const Contact = () => {
               required
               rows="5"
               placeholder="What's your message?"
-              className="w-full px-4 py-3 rounded-xl bg-neutral-100 text-black placeholder:text-neutral-400 border border-neutral-300 focus:border-black focus:ring-2 focus:ring-black/40 dark:bg-neutral-900 dark:text-white dark:placeholder:text-neutral-500 dark:border-neutral-700 dark:focus:border-white dark:focus:ring-white/40 outline-none transition resize-none font-michroma"
+              className="w-full px-5 sm:px-6 py-3 sm:py-4 rounded-2xl bg-neutral-100 text-black placeholder:text-neutral-400 border border-neutral-300 focus:border-black focus:ring-2 focus:ring-black/40 dark:bg-neutral-900 dark:text-white dark:placeholder:text-neutral-500 dark:border-neutral-700 dark:focus:border-white dark:focus:ring-white/40 outline-none transition resize-none font-michroma text-base"
             ></textarea>
           </motion.div>
           <motion.div
@@ -151,7 +151,7 @@ const Contact = () => {
             <Button
               type="submit"
               disabled={loading}
-              className="w-full gap-2 bg-neutral-900 text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-bold text-lg py-3 rounded-xl flex items-center justify-center font-rexlia"
+              className="w-full gap-2 bg-neutral-900 text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-bold text-base sm:text-lg py-3 sm:py-4 rounded-2xl flex items-center justify-center font-rexlia"
             >
               {loading ? (
                 "Sending..."
@@ -177,12 +177,12 @@ const Contact = () => {
             </Button>
           </motion.div>
           {success === true && (
-            <p className="text-green-600 dark:text-green-500 mt-2 text-center font-semibold font-michroma">
+            <p className="text-green-600 dark:text-green-500 mt-2 text-center font-semibold font-michroma text-sm sm:text-base">
               Message sent successfully!
             </p>
           )}
           {success === false && (
-            <p className="text-red-600 dark:text-red-500 mt-2 text-center font-semibold font-michroma">
+            <p className="text-red-600 dark:text-red-500 mt-2 text-center font-semibold font-michroma text-sm sm:text-base">
               Failed to send message. Please try again.
             </p>
           )}
