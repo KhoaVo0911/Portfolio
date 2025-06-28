@@ -57,7 +57,13 @@ const TimelineItem = ({ exp, idx }) => {
           className="relative w-full max-w-md md:max-w-lg"
         >
           <Card
-            className={`py-4 px-4 sm:py-6 sm:px-8 dark:bg-white bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 border-white/10 shadow-white/20 dark:border-gray-200 dark:shadow-2xl border shadow-2xl rounded-3xl transition-transform duration-300 hover:scale-[1.03] hover:shadow-3xl group relative overflow-hidden dark:shadow-white/20`}
+            className={`py-4 px-4 sm:py-6 sm:px-8 
+              bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900
+              dark:bg-gradient-to-br dark:from-white dark:via-neutral-100 dark:to-white
+              border-white/10 shadow-white/20 
+              dark:border-gray-200 dark:shadow-2xl border shadow-2xl rounded-3xl 
+              transition-transform duration-300 hover:scale-[1.03] 
+              hover:shadow-3xl group relative overflow-hidden `}
           >
             <div className="absolute inset-0 pointer-events-none rounded-3xl bg-gradient-to-br from-white/5 to-transparent dark:from-white/30 dark:to-transparent" />
             <h3 className="text-lg sm:text-xl font-bold font-beckman mb-1 uppercase text-white dark:text-black">
@@ -99,7 +105,8 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="w-full min-h-screen py-16 sm:py-20 px-2 flex flex-col items-center justify-center relative bg-neutral-900 text-white overflow-x-hidden transition-colors duration-300 dark:bg-white dark:text-black"
+      className="w-full min-h-screen py-16 sm:py-20 px-2 flex flex-col items-center justify-center relative
+       bg-neutral-900 text-white overflow-x-hidden transition-colors duration-300 dark:bg-white dark:text-black"
     >
       <div
         className="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 h-full w-1 bg-gradient-to-b from-gray-300 to-gray-500 rounded-full z-0"
@@ -120,7 +127,7 @@ const Experience = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mb-8 sm:mb-12 px-2 sm:px-0"
         >
-          <p className="text-base sm:text-lg font-michroma text-white dark:text-black mb-2 uppercase tracking-widest text-center sm:text-left">
+          <p className="text-base sm:text-lg font-michroma text-white dark:text-white mb-2 uppercase tracking-widest text-center sm:text-left">
             What I've done so far
           </p>
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-black font-mova tracking-tight mb-2 text-white dark:text-black text-center sm:text-left">
